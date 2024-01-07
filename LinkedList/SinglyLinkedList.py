@@ -20,7 +20,7 @@ class SinglyLinkedList:
         new_node = SinglyLinkedListNode(val)
         self.count += 1
 
-        if not self.head:
+        if self.is_empty():
             self.head = self.tail = new_node
 
         new_node.next = self.head
@@ -39,7 +39,7 @@ class SinglyLinkedList:
         self.tail = new_node
 
     def remove(self, val: int) -> None:
-        if not self.head:
+        if self.is_empty():
             return
 
         self.count -= 1
@@ -60,8 +60,10 @@ class SinglyLinkedList:
             self.tail = prev_node
 
     def display(self) -> None:
-        if not self.head:
+        if self.is_empty():
+            print("Empty")
             return
+
         output = ""
         current_node = self.head
         while current_node is not None:
