@@ -1,2 +1,2 @@
 # data-structures
-Implement DS from scratch in Java
+Implement DS from scratch in Python/Java
